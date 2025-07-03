@@ -6,3 +6,10 @@ if (age >= 18  ) {
 }else{
     console.log("you are underage")
 }
+/*
+TWO TYPES OF BOOLEANS
+1.true
+2.false
+* */
+
+
