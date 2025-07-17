@@ -29,7 +29,15 @@
   }else if(computerMove==='scissors'){
       Result = 'you Win'
   }
-  alert(`you picked Rock computer picked ${computerMove} .${Result }`)
+   if(result==='you win'){
+      score.wins=score.wins+1
+  }else if(result==='you lose'){
+      score.loses=score.loses+1
+  }else if(result==='tie'){
+      score.ties=score.ties+1
+  }
+  alert(`you picked Rock computer picked ${computerMove} .${Result }
+    wins:${score.wins}  losses:${score.losses}  ties:${score.ties}`)
 "
 >ROCK</button>
 <button
@@ -53,7 +61,15 @@
   }else if(computerMove==='scissors'){
       Result = 'you lose'
   }
-  alert(`you picked Papers computer picked ${computerMove} .${Result }`)
+   if(result==='you win'){
+      score.wins=score.wins+1
+  }else if(result==='you lose'){
+      score.loses=score.loses+1
+  }else if(result==='tie'){
+      score.ties=score.ties+1
+  }
+  alert(`you picked Papers computer picked ${computerMove} .${Result }
+  wins:${score.wins}  losses:${score.losses}  ties:${score.ties}`)
 "
 >PAPER</button>
 <button
@@ -77,11 +93,28 @@ const randomNumber=Math.random()
   }else if(computerMove==='scissors'){
       Result = 'tie'
   }
-  alert(`you picked Scissors computer picked ${computerMove} .${Result }`)
+  if(result==='you win'){
+      score.wins= score.wins +1
+  }else if(result==='you lose'){
+      score.loses= score.loses +1
+  }else if(result==='tie'){
+      score.ties= score.ties +1
+  }
+
+
+  alert(`you picked Scissors computer picked ${computerMove} .${Result }
+  wins:${score.wins}  losses:${score.losses}  ties:${score.ties}`)
 "
 >SCISSOR</button>
+<button>RESET SCORE</button>
 
 <script>
+
+    const score={
+wins:0,
+losses:0,
+ties:0,
+};
 
 </script>
 <script>
@@ -107,6 +140,17 @@ FALSY VALUES
 eg: 0, '', NaN, undefined,null
 
 * */
+ const result= true? 'truthy':'falsy'
+console.log(result)
+
+const result2= 0? 'truthy':'falsy'
+console.log(result2)
+
+// GUARD OPERATOR- blocks a function from being executed
+false && console.log('hellow world')
+const left = false &&'hellow world'
+console.log(left)
+
 console.log(3<5)
 console.log(true)
 console.log(false)

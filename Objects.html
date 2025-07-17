@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //OBJECT
+   /* const obj = {
+        name: 'John',
+        age: 25,
+        level:"programmer",
+    }
+    console.log(obj);
+    console.log(obj.name);
+    // replace an object
+    obj.name = 'Musa';
+    console.log(obj);
+    // add an object
+    obj.class= "four"
+    console.log(obj);
+    // delete an object
+    delete obj.name;
+    console.log(obj);
+
+    */
+    const  product2 ={
+       name:'shirt',
+       price:1045,
+       ['delivery-method']:'car',
+       Transaction_cost:1000,
+        rating:{
+           stars :4.5,
+            count:92,
+        },
+        fun:function(){
+           console.log('function inside an object');
+
+        }
+
+    };
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);
+    console.log(product2['delivery-method']);
+    console.log(product2.rating.count);
+    product2.fun()
+
+    // BUILD IN JSON
+
+  console.log(JSON.stringify(product2))// JSON.stringify converts a JAVASCRIPT OBJECT file to a JSON FILE
+   console.log(JSON.parse(JSON.stringify(product2)));// converts a  JSON FILE to a JAVASCRIPT OBJECT FILE
+
+    const jsonString= JSON.stringify(product2)
+    console.log(JSON.parse(jsonString));// same as parse
+
+
+
+</script>
+</body>
+</html>
