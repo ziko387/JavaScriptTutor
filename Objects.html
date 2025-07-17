@@ -24,7 +24,7 @@
     delete obj.name;
     console.log(obj);
 
-    */
+
     const  product2 ={
        name:'shirt',
        price:1045,
@@ -54,6 +54,38 @@
 
     const jsonString= JSON.stringify(product2)
     console.log(JSON.parse(jsonString));// same as parse
+
+    */
+    // AUTO BOXING
+    console.log('Hello World'.length);// length of the character
+    console.log('Hello World'.toUpperCase()); // converts the word to uppercase letters
+
+    const car1= {
+        name: 'Car1',
+        age: 20,
+        type: 'toyota'
+    }
+    const car2 = car1
+    car1.type = 'BMW'
+    console.log(car1);
+    console.log(car1===car2);
+    const car3= {
+        name: 'Car1',
+        age: 20,
+        type: 'toyota'
+    }
+    //const type = car3.type;
+    const {type,age} = car3;
+    console.log(type);
+    console.log(age);
+    const  car4={
+        name: 'Car4',
+        age: age,
+        type: type
+    }
+    console.log(car4);
+
+
 
 
 

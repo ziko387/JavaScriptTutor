@@ -36,7 +36,7 @@ localStorage.removeItem('score');
 ">RESET SCORE</button>
 
 <script>
-    let score = JSON.parse(localStorage.getItem('score'));
+    let score = JSON.parse(localStorage.getItem('score')); //use || - default operator using score
     if (score === null) {
         score= {
             wins: 0,
