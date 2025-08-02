@@ -12,7 +12,7 @@
         onClick="
   playGame('rock')
 "
->ROCK</button>
+>ROCk</button>
 <button
         onClick="
         playGame('paper')
@@ -27,11 +27,15 @@ playGame('scissors')
 
 "
 >SCISSOR</button>
+<p class="JS-van"></p>
+<p class="Js-cor"></p>
+<p class="JS-car"></p>
 <button onClick="
 score.wins = 0;
 score.losses = 0;
 score.ties= 0;
 localStorage.removeItem('score');
+updateScore();
 
 ">RESET SCORE</button>
 
@@ -44,6 +48,7 @@ localStorage.removeItem('score');
             ties: 0,
         };
     }
+    updateScore()
 
    // const score= {
      //   wins: 0,
@@ -92,11 +97,16 @@ localStorage.removeItem('score');
     }
         localStorage.setItem('score',JSON.stringify(score));
 
+updateScore()
+        document.querySelector('.JS-van').innerHTML = Result;
+    document.querySelector('.Js-cor').innerHTML = `you${playerMove} - ${computerMove}computer`;
 
-
-        alert
-        (`you picked ${playerMove} computer picked ${computerMove} .${Result }
-    wins:${score.wins}  losses:${score.losses}  ties:${score.ties} `)
+      //  alert
+     //   (`you picked ${playerMove} computer picked ${computerMove} .${Result }
+  //  wins:${score.wins}  losses:${score.losses}  ties:${score.ties} `)
+    }
+    function  updateScore(){
+        document.querySelector('.JS-car').innerHTML =`wins:${score.wins}  losses:${score.losses}  ties:${score.ties}`
     }
     
 
