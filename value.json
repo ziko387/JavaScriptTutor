@@ -2,7 +2,7 @@
     "name": "value",
     "version": "1.0.0", 
     "description": "A simple value module",
-    "main": "index.js",
+    "main": "ktio.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
