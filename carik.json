@@ -1,0 +1,6 @@
+{
+    "name":"carik",
+    "version":"0.1.0",
+    "description":"A simple command-line tool to manage your tasks.",
+    "main":"index.js",
+}
